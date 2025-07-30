@@ -15,7 +15,7 @@ stages:
         inputs:
           SourceFolder: '$(System.DefaultWorkingDirectory)'
           Contents: |
-            **/*.yml
+            **/*.yaml
              **/*.java
           TargetFolder: '$(Build.ArtifactStagingDirectory)'
       - bash: ls -R $(Build.ArtifactStagingDirectory)
