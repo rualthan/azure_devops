@@ -1,0 +1,21 @@
+#Use Case 10
+#Jobs on Multiple Agents 
+#Using strategy and understand about environment
+#I want to run the same build with multiple O/S, would like to run at Ubuntu and Mac
+
+trigger:
+- master
+
+strategy:
+  matrix:
+    linux:
+      operatingSystem: 'ubuntu-latest'
+    mac:
+      operatingSystem: 'macos-latest'
+pool:
+  vmImage: $(operatingSystem)
+
+steps:
+- script: echo Running on $(operatingSystem)
+  displayName: 'Run a one-line script'
+
