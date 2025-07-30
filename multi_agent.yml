@@ -9,7 +9,7 @@ trigger:
 strategy:
   matrix:
     linux:
-      operatingSystem: 'debian-latest'
+      operatingSystem: 'windows-latest'
     mac:
       operatingSystem: 'macos-latest'
 pool:
